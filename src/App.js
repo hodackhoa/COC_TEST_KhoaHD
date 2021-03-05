@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {Switch} from 'react-router';
+import Configurations from './configurations.js';
+import Users from './users.js'
+import Collectibles from './collectibles.js'
+import Categories from './categories.js'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+	      <div className="App">
+		      <Router>
+		        <Switch>
+		          <Route path="/" exact component={Configurations}/>
+		          <Route path="/users" exact component={Users}/>
+		          <Route path="/collectibles" exact component={Collectibles}/>
+		          <Route path="/categories" exact component={Categories}/>
+		        </Switch> 
+		       </Router>
+	      </div>
+	    
+    );
+  }
 }
-
 export default App;
