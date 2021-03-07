@@ -27,21 +27,21 @@
 			"name": "Games",
 			"key": "games",
 			"order":0,
-			"status": true
+			"status": "Enable"
 		},
 		{
 			"id":1,
 			"name": "DeFi",
 			"key": "defi",
 			"order":1,
-			"status": true
+			"status": "Enable"
 		},
 		{
 			"id":2,
 			"name": "Domains",
 			"key": "ens",
 			"order":2,
-			"status": true
+			"status": "Disable"
 		}
 	]
 }

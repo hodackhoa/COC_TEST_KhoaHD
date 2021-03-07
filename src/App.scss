@@ -1,0 +1,122 @@
+@font-face{
+	src:url(font/helveticaneue.ttf);
+	font-family: HelveticaNeue
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: HelveticaNeue
+}
+html{
+	background: #F2F2F2;
+}
+.btn-default{
+	width: 170px;
+	height: 58px;
+	outline: none;
+	border: none;
+	background: #55642C;
+	font-size: 20px;
+	color: white;
+}
+.grInp{
+	display: grid;
+	grid-template-columns: 117px 1fr;
+	align-items: center;
+	margin-bottom: 7px;
+	label{
+		font-size: 15px;
+		font-weight: bold;
+	}
+	input{
+		box-sizing: border-box;
+		height: 40px;
+		padding-left: 16px;
+		border: 1px solid #dbe2bf;
+		outline: none;
+	}
+	input:focus{
+		border: 1px solid #55642C;
+		background: #f0f4e4 !important;
+	}
+	span{
+		grid-column: 2;
+		grid-row: 2;
+		color:#C30000;
+		font-size: 8px;
+		height: 9px;
+		margin-top:4px;
+		visibility: hidden;
+	}
+}
+.App {
+	.pageContent{
+		width: 1366px;
+		height: 768px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 208px 1fr;
+		grid-template-rows: auto 1fr;
+		nav{
+			ul{
+				a{
+					text-decoration: none;
+					color: black;
+					display: block;
+					height: 57px;
+					padding-left: 41px;
+				}
+				li{
+					height: 57px;
+					line-height: 57px;
+					border-radius: 5px;
+				}
+				li:hover{
+					background: #dfdfe1;
+				}
+			}
+		}
+		.Content{
+			table{
+				width: 100%;
+				border-collapse: collapse;
+				td,th{
+					width: 1%;
+					border-bottom: 1px solid #cfcfcf;
+					padding: 20px 0;
+					text-align: center;
+					font-size: 15px;
+				}
+				th:nth-child(-n+2), td:nth-child(-n+2){
+					text-align: left;
+				}
+				tr:last-child td{
+					border-bottom: none;
+				}
+				input[type="checkbox"]{
+					width: 26px;
+					height: 26px;
+					position: absolute;
+					opacity: 0;
+					top:0;
+					left:0;
+					z-index: 2;
+				}
+				.checkMark{
+					position: absolute;
+					top:0;
+					left: 0;
+					display: block;
+					width: 26px;
+					height: 26px;
+					background: white;
+					border: 1px solid #91a069;
+					z-index: 1;
+				}
+				input[type="checkbox"]:checked ~ .checkMark{
+					background: #DBE2BF;
+				}
+			}
+		}
+	}
+}

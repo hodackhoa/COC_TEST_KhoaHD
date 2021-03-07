@@ -5,6 +5,8 @@ import Configurations from './configurations.js';
 import Users from './users.js'
 import Collectibles from './collectibles.js'
 import Categories from './categories.js'
+import Popup from './components/popup.js'
+import LoadingPop from './components/loadingPop.js'
 import './App.css';
 
 class App extends React.Component {
@@ -19,6 +21,8 @@ class App extends React.Component {
 		          <Route path="/categories" exact component={Categories}/>
 		        </Switch> 
 		       </Router>
+		       <Popup/>
+		       <LoadingPop/>
 	      </div>
 	    
     );

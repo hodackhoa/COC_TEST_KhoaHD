@@ -5,8 +5,10 @@ import userIco from '../images/profile-user@1X.png'
 class Header extends React.Component {
   render(){
   	let styHead={
+      gridColumn: "1/3",
   		width: "100%",
   		height: "68px",
+      boxSizing: "border-box",
   		display: "flex",
   		justifyContent : 'space-between',
   		padding: "10px",
@@ -14,10 +16,10 @@ class Header extends React.Component {
   		background: "#DBE2BF"
   	}
     return (
-      <div className="Header" style={styHead}>
+      <header className="Header" style={styHead}>
       	<img src={logo}/>
       	<img src={userIco} style={{marginRight: "32px"}}/>
-      </div>
+      </header>
     );
   }
 }
