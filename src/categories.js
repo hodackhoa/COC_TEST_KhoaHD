@@ -12,6 +12,7 @@ class Categories extends React.Component {
 		.then(response=>{
 			//console.log(response.data);
 			let tableHead=["Key","Display Name","Show/Hide","Order","Edit", "Delete", "Bulk Detete"];
+			response.data.sort((a,b)=>{return (parseInt(a.order)>parseInt(b.order))? 1 : - 1})
 			this.props.dispatch(GetData({tableHead:tableHead,tableBody: response.data}))
 		}).catch((err)=>{
 			console.log(err)
